@@ -1,0 +1,28 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  image: node:16
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+test:
+  stage: test
+  image: node:16
+  script:
+    - npm run test
+
+deploy:
+  stage: deploy
+  image: node:16
+  script:
+    - echo "Деплой на сервер"
+  only:
+    - master

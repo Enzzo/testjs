@@ -12,8 +12,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Файлы переменных окружения
-.env
-*.env
+# .env
+# *.env
 
 # Директории тестового покрытия
 /coverage/
